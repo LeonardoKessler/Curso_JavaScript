@@ -219,13 +219,45 @@ troco: R$ 11.00
     com a entrada de 3 valores ordenalos de forma crescente.
 */
 
-let produto = Number(prompt('valor do produto: R$ '));
+//let produto = Number(prompt('valor do produto: R$ '));
+
+
+// while(contador < 1){
+//     console.log('ola')
+//     contador ++
+// }
+
+//let nome = 0
+
+// do{
+//     nome = Number(prompt('digite'))
+   
+// }while(nome != 0 )
+
+let produto = 0;
+
+let vetor = [];
+let i = 0
+let total = 0
+
 
 do{
-    if(produto == 0){
-        break;
-    }
-    if(produto <=100000){
-      let conta =  produto+produto;
-    }
-} while
+    produto = Number(prompt(`produto ${i+1} R$: `));
+    vetor[i] = produto;
+    i++   
+ 
+}while(produto != 0);
+
+for(let j=0; j<vetor.length; j++){
+    total = total+vetor[j]
+}
+
+console.log('total: R$',total);
+
+let dinheiro = Number(prompt('dinheiro: R$ '));
+
+let troco = dinheiro-total;
+
+console.log('troco: R$',troco);
+
+
