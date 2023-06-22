@@ -32,6 +32,7 @@ console.log('Hambúrguer = 103');
 console.log('Cheeseburguer = 104');
 console.log('Refrigerante = 105');
 console.log('Digite 999 para finalizar o pedido.')
+console.log('');
 
 
 
@@ -50,58 +51,69 @@ const c = 1.50
 const d = 1.20
 const e = 1.30
 const f = 1
-const precoA = 0
-const precoB = 0
-const precoC = 0
-const precoD = 0
-const precoE = 0
-const precoF = 0
+let precoA = 0
+let precoB = 0
+let precoC = 0
+let precoD = 0
+let precoE = 0
+let precoF = 0
+
+
+let posicaoA = 0
+let posicaoB = 0
+let posicaoC = 0
+let posicaoD = 0
+let posicaoE = 0
+let posicaoF = 0
+
 
 do{
-    codigo = Number(prompt(`Porfavor, digite o código do lanche: `));
+    codigo = array(Number(prompt(`Porfavor, digite o código do lanche: `)));
     vetor[i] = codigo;
      i++;
+     
 
     if(codigo==100){
         codigo;
         quantidadeA = Number(prompt(`quantos voce quer? `));
-        const precoA = a*quantidadeA
-        console.log(`código: 100 ${quantidadeA} ${precoA}`);
+        precoA = a*quantidadeA;
+        posicaoA = i;
     }
     
     else if(codigo==101){
         codigo;
         quantidadeB = Number(prompt(`quantos voce quer? `));
-        const precoB = b*quantidadeB
-        console.log(`código: 101 ${quantidadeB} ${precoB}`);
+        precoB = b*quantidadeB;
+        posicaoB = i;
     }
 
     else if(codigo==102){
         codigo;
         quantidadeC = Number(prompt(`quantos voce quer? `));
-        const precoC = c*quantidadeC
-        console.log(`código: 102 ${quantidadeC} ${precoC}`);
+        precoC = c*quantidadeC;
+        posicaoC = i;
     }
 
     else if(codigo==103){
         codigo;
         quantidadeD = Number(prompt(`quantos voce quer? `));
-        const precoD = d*quantidadeD
-        console.log(`código: 103 ${quantidadeD} ${precoD}`);
+        precoD = d*quantidadeD;
+        posicaoD = i;
     }
 
     else if(codigo==104){
         codigo;
         quantidadeE = Number(prompt(`quantos voce quer? `));
-        const precoE = a*quantidadeE
-        console.log(`código: 104 ${quantidadeE} ${precoE}`);
+        precoE = a*quantidadeE;
+        posicaoE = i;
     }
 
     else if(codigo==105){
         codigo;
         quantidadeF = Number(prompt(`quantos voce quer? `));
-        const precoF = a*quantidadeF
-        console.log(`código: 105 ${quantidadeF} ${precoF}`);
+        precoF = a*quantidadeF;
+        posicaoF = i;
+        
     }
 
     else if(codigo==999){
@@ -116,5 +128,31 @@ do{
     }
 
 }while(codigo != 999);
+
+
+
+if(posicaoA){
+    console.log(`código: 100 quantidade: ${quantidadeA} valor R$ ${precoA}`);
+}
+if(posicaoB){
+    console.log(`código: 101 quantidade: ${quantidadeB} valor R$ ${precoB}`);
+}
+if(posicaoC){
+    console.log(`código: 102 quantidade: ${quantidadeC} valor R$ ${precoC}`);
+}
+if(posicaoD){
+    console.log(`código: 103 quantidade: ${quantidadeD} valor R$ ${precoD}`);
+}
+if(posicaoE){
+    console.log(`código: 104 quantidade: ${quantidadeE} valor R$ ${precoE}`);
+}
+if(posicaoF){
+    console.log(`código: 105 quantidade: ${quantidadeF} valor R$ ${precoF}`);
+}
+
+
+
+
+
 
 
