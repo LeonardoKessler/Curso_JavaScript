@@ -68,7 +68,7 @@ let posicaoF = 0
 
 
 do{
-    codigo = array(Number(prompt(`Porfavor, digite o código do lanche: `)));
+    codigo = (Number(prompt(`Porfavor, digite o código do lanche: `)));
     vetor[i] = codigo;
      i++;
      
@@ -129,7 +129,7 @@ do{
 
 }while(codigo != 999);
 
-
+console.log(vetor)
 
 if(posicaoA){
     console.log(`código: 100 quantidade: ${quantidadeA} valor R$ ${precoA}`);
