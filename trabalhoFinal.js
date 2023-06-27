@@ -40,6 +40,7 @@ let codigo = 0;
 let i = 0;
 let vetor = [];
 let quantidadeA = 0
+
 let quantidadeB = 0
 let quantidadeC = 0
 let quantidadeD = 0
@@ -67,6 +68,31 @@ let posicaoE = 0
 let posicaoF = 0
 
 
+let vetorQuantidade_A = [];
+let AAA = 0
+
+
+let vetorQuantidade_B = [];
+let BBB = 0
+
+
+let vetorQuantidade_C = [];
+let CCC = 0
+
+
+let vetorQuantidade_D = [];
+let DDD = 0
+
+
+let vetorQuantidade_E = [];
+let EEE = 0
+
+
+let vetorQuantidade_F = [];
+let FFF = 0
+
+
+
 do{
     codigo = (Number(prompt(`Porfavor, digite o código do lanche: `)));
     vetor[i] = codigo;
@@ -76,43 +102,114 @@ do{
     if(codigo==100){
         codigo;
         quantidadeA = Number(prompt(`quantos voce quer? `));
-        precoA = a*quantidadeA;
-        posicaoA = i;
+        
+
+            if(quantidadeA >=0){
+                vetorQuantidade_A[AAA] = quantidadeA
+                AAA++;
+            precoA = a*quantidadeA;
+            posicaoA = i;
+            }
+            else {
+            console.log('quantidade invalida.')
+            quantidadeA;
+
+            }
+
+        
     }
     
     else if(codigo==101){
         codigo;
         quantidadeB = Number(prompt(`quantos voce quer? `));
-        precoB = b*quantidadeB;
-        posicaoB = i;
+        
+
+            if(quantidadeB >=0){
+                vetorQuantidade_B[BBB] = quantidadeB
+                BBB++;
+            
+            precoB = b*quantidadeB;
+            posicaoB = i;
+            }
+            else {
+                console.log('quantidade invalida.')
+                quantidadeB;
+            }
+
     }
 
     else if(codigo==102){
         codigo;
         quantidadeC = Number(prompt(`quantos voce quer? `));
-        precoC = c*quantidadeC;
-        posicaoC = i;
+        
+
+            if(quantidadeC >=0){
+                vetorQuantidade_C[CCC] = quantidadeC
+                CCC++;
+            
+            precoC = c*quantidadeC;
+            posicaoC = i;
+            }
+            else {
+            console.log('quantidade invalida.')
+            quantidadeC;
+            }
+
     }
 
     else if(codigo==103){
         codigo;
         quantidadeD = Number(prompt(`quantos voce quer? `));
-        precoD = d*quantidadeD;
-        posicaoD = i;
+        
+
+            if(quantidadeD >=0){
+                vetorQuantidade_D[DDD] = quantidadeD
+                DDD++;
+           
+            precoD = d*quantidadeD;
+            posicaoD = i;
+            }
+            else {
+            console.log('quantidade invalida.')
+            quantidadeD;
+            }
+
     }
 
     else if(codigo==104){
         codigo;
         quantidadeE = Number(prompt(`quantos voce quer? `));
-        precoE = a*quantidadeE;
-        posicaoE = i;
+        
+
+            if(quantidadeE >=0){
+                vetorQuantidade_E[EEE] = quantidadeE
+                EEE++;
+           
+            precoE = e*quantidadeE;
+            posicaoE = i;
+            }
+            else {
+            console.log('quantidade invalida.')
+            quantidadeE;
+            }
+
     }
 
     else if(codigo==105){
         codigo;
         quantidadeF = Number(prompt(`quantos voce quer? `));
-        precoF = a*quantidadeF;
-        posicaoF = i;
+
+            if(quantidadeF >=0){
+                vetorQuantidade_F[FFF] = quantidadeF
+                FFF++;
+
+            precoF = f*quantidadeF;
+            posicaoF = i;
+            }
+            else {
+            console.log('quantidade invalida.')
+            quantidadeF;
+            }
         
     }
 
@@ -129,8 +226,63 @@ do{
 
 }while(codigo != 999);
 
-console.log(vetor)
 
+
+
+let A1 = 0;
+let A2 = 0
+let B1 = 0;
+let C1 = 0;
+let D1 = 0;
+let E1 = 0;
+let F1 = 0;
+let a4 = 0;
+
+
+
+for(let A1 = 0; A1 < vetorQuantidade_A.length; A1++){
+    precoA = a*vetorQuantidade_A[A1];
+    console.log(`código: 100 quantidade: ${vetorQuantidade_A[A1]} valor R$ ${precoA}`);
+    
+    for(let A2=0; A2<vetorQuantidade_A.length;A2++){
+        a4 = vetorQuantidade_A[A2]*a
+        console.log(a4);
+    }
+    
+    
+}
+
+
+for(let B1 = 0; B1 < vetorQuantidade_B.length; B1++){
+    precoB = b*vetorQuantidade_B[B1];
+    console.log(`código: 101 quantidade: ${vetorQuantidade_B[B1]} valor R$ ${precoB}`);
+}
+
+for(let C1 = 0; C1 < vetorQuantidade_C.length; C1++){
+    precoC = c*vetorQuantidade_C[C1];
+    console.log(`código: 102 quantidade: ${vetorQuantidade_C[C1]} valor R$ ${precoC}`);
+}
+
+for(let D1 = 0; D1 < vetorQuantidade_D.length; D1++){
+    precoD = d*vetorQuantidade_D[D1];
+    console.log(`código: 103 quantidade: ${vetorQuantidade_D[D1]} valor R$ ${precoD}`);
+}
+
+for(let E1 = 0; E1 < vetorQuantidade_E.length; E1++){
+    precoE = e*vetorQuantidade_E[E1];
+    console.log(`código: 104 quantidade: ${vetorQuantidade_E[E1]} valor R$ ${precoE}`);
+}
+
+for(let F1 = 0; F1 < vetorQuantidade_F.length; F1++){
+    precoF = f*vetorQuantidade_F[F1];
+    console.log(`código: 105 quantidade: ${vetorQuantidade_F[F1]} valor R$ ${precoF}`);
+}
+
+
+
+
+
+/*
 if(posicaoA){
     console.log(`código: 100 quantidade: ${quantidadeA} valor R$ ${precoA}`);
 }
@@ -149,7 +301,7 @@ if(posicaoE){
 if(posicaoF){
     console.log(`código: 105 quantidade: ${quantidadeF} valor R$ ${precoF}`);
 }
-
+*/
 
 
 
