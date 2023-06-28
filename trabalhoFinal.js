@@ -40,7 +40,6 @@ let codigo = 0;
 let i = 0;
 let vetor = [];
 let quantidadeA = 0
-
 let quantidadeB = 0
 let quantidadeC = 0
 let quantidadeD = 0
@@ -229,58 +228,67 @@ do{
 
 
 
-let A1 = 0;
-let A2 = 0
-let B1 = 0;
-let C1 = 0;
-let D1 = 0;
-let E1 = 0;
-let F1 = 0;
-let a4 = 0;
+let calculoA = 0;
+let calculoB = 0;
+let calculoC = 0;
+let calculoD = 0;
+let calculoE = 0;
+let calculoF = 0;
 
 
 
 for(let A1 = 0; A1 < vetorQuantidade_A.length; A1++){
-    precoA = a*vetorQuantidade_A[A1];
-    console.log(`código: 100 quantidade: ${vetorQuantidade_A[A1]} valor R$ ${precoA}`);
     
-    for(let A2=0; A2<vetorQuantidade_A.length;A2++){
-        a4 = vetorQuantidade_A[A2]*a
-        console.log(a4);
-    }
-    
+    calculoA += vetorQuantidade_A[A1];
+    precoA = calculoA*a;
     
 }
 
 
 for(let B1 = 0; B1 < vetorQuantidade_B.length; B1++){
-    precoB = b*vetorQuantidade_B[B1];
-    console.log(`código: 101 quantidade: ${vetorQuantidade_B[B1]} valor R$ ${precoB}`);
+    calculoB += vetorQuantidade_C[B1];
+    precoB = calculoB*b;
 }
 
 for(let C1 = 0; C1 < vetorQuantidade_C.length; C1++){
-    precoC = c*vetorQuantidade_C[C1];
-    console.log(`código: 102 quantidade: ${vetorQuantidade_C[C1]} valor R$ ${precoC}`);
+    calculoC += vetorQuantidade_C[C1];
+    precoC = calculoC*c;
 }
 
 for(let D1 = 0; D1 < vetorQuantidade_D.length; D1++){
-    precoD = d*vetorQuantidade_D[D1];
-    console.log(`código: 103 quantidade: ${vetorQuantidade_D[D1]} valor R$ ${precoD}`);
+    calculoD += vetorQuantidade_D[D1];
+    precoD = calculoD*d;
 }
 
 for(let E1 = 0; E1 < vetorQuantidade_E.length; E1++){
-    precoE = e*vetorQuantidade_E[E1];
-    console.log(`código: 104 quantidade: ${vetorQuantidade_E[E1]} valor R$ ${precoE}`);
+    calculoE += vetorQuantidade_E[E1]
+    precoE = calculoE*e
 }
 
 for(let F1 = 0; F1 < vetorQuantidade_F.length; F1++){
-    precoF = f*vetorQuantidade_F[F1];
-    console.log(`código: 105 quantidade: ${vetorQuantidade_F[F1]} valor R$ ${precoF}`);
+    calculoF += vetorQuantidade_F[F1]
+    precoF = calculoF*f
 }
 
-
-
-
+if(calculoA>0){
+    console.log(`código: 100 quantidade: ${calculoA} valor R$ ${precoA}`);
+}
+if(calculoB>0){
+    console.log(`código: 101 quantidade: ${calculoB} valor R$ ${precoB}`);
+}
+if(calculoC>0){
+    console.log(`código: 102 quantidade: ${calculoC} valor R$ ${precoC}`);
+}
+if(calculoD>0){
+    console.log(`código: 103 quantidade: ${calculoD} valor R$ ${precoD}`);
+}
+if(calculoE>0){
+    console.log(`código: 104 quantidade: ${calculoE} valor R$ ${precoE}`);
+}
+if(calculoF>0){
+    console.log(`código: 105 quantidade: ${calculoF} valor R$ ${precoF}`);
+}
+console.log(`Valor total R$ ${precoA+precoB+precoC+precoD+precoE+precoF}`);
 
 /*
 if(posicaoA){
